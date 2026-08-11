@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class RedeliveryPolicy | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class RedeliveryPolicy | CodersRealm Docs ">
+    
+    <meta name="description" content="A policy used to customize exactly how you want the redelivery to work.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-nms-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy">
+
+
+
+  <h1 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy" class="text-break">Class RedeliveryPolicy</h1>
+  <div class="markdown level0 summary"><p>A policy used to customize exactly how you want the redelivery to work.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">RedeliveryPolicy</span></div>
+      <div class="level2"><a class="xref" href="CodersRealm.NmsAmqpClient.DefaultRedeliveryPolicy.html">DefaultRedeliveryPolicy</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IRedeliveryPolicy</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.NmsAmqpClient.html">NmsAmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.NmsAmqpClient.dll</h6>
+  <h5 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class RedeliveryPolicy : IRedeliveryPolicy, ICloneable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_BackOffMultiplier_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.BackOffMultiplier*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_BackOffMultiplier" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.BackOffMultiplier">BackOffMultiplier</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int BackOffMultiplier { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_CollisionAvoidancePercent_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.CollisionAvoidancePercent*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_CollisionAvoidancePercent" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.CollisionAvoidancePercent">CollisionAvoidancePercent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int CollisionAvoidancePercent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_InitialRedeliveryDelay_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.InitialRedeliveryDelay*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_InitialRedeliveryDelay" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.InitialRedeliveryDelay">InitialRedeliveryDelay</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int InitialRedeliveryDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_MaximumRedeliveries_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.MaximumRedeliveries*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_MaximumRedeliveries" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.MaximumRedeliveries">MaximumRedeliveries</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int MaximumRedeliveries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_NextBool_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.NextBool*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_NextBool" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.NextBool">NextBool</h4>
+  <div class="markdown level1 summary"><p>Gets the next boolean</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static bool NextBool { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if [next bool]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_RandomNumberGenerator_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.RandomNumberGenerator*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_RandomNumberGenerator" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.RandomNumberGenerator">RandomNumberGenerator</h4>
+  <div class="markdown level1 summary"><p>Gets the random number generator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static Random RandomNumberGenerator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><p>The random number generator.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_UseCollisionAvoidance_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.UseCollisionAvoidance*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_UseCollisionAvoidance" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.UseCollisionAvoidance">UseCollisionAvoidance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool UseCollisionAvoidance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_UseExponentialBackOff_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.UseExponentialBackOff*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_UseExponentialBackOff" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.UseExponentialBackOff">UseExponentialBackOff</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool UseExponentialBackOff { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_Clone_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.Clone*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_Clone" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Clone this object and return a new instance that the caller now owns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_GetOutcome_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.GetOutcome*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_GetOutcome_Apache_NMS_IDestination_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.GetOutcome(Apache.NMS.IDestination)">GetOutcome(IDestination)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract int GetOutcome(IDestination destination)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDestination</span></td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_RedeliveryDelay_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.RedeliveryDelay*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_RedeliveryPolicy_RedeliveryDelay_System_Int32_" data-uid="CodersRealm.NmsAmqpClient.RedeliveryPolicy.RedeliveryDelay(System.Int32)">RedeliveryDelay(int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int RedeliveryDelay(int redeliveredCounter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">redeliveredCounter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Apache.NMS.IRedeliveryPolicy</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

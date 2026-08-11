@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface ISubscriberManager | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface ISubscriberManager | CodersRealm Docs ">
+    
+    <meta name="description" content="Manager abstraction responsible for creating and managing  instances. Implementations provide asynchronous creation methods with various configuration options and support deletion/lifecycle management of created subscribers.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-nms-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager">
+
+
+
+  <h1 id="CodersRealm_NmsAmqpClient_ISubscriberManager" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager" class="text-break">Interface ISubscriberManager</h1>
+  <div class="markdown level0 summary"><p>Manager abstraction responsible for creating and managing <a class="xref" href="CodersRealm.NmsAmqpClient.ISubscriber.html">ISubscriber</a> instances.
+Implementations provide asynchronous creation methods with various configuration options
+and support deletion/lifecycle management of created subscribers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.NmsAmqpClient.html">NmsAmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.NmsAmqpClient.dll</h6>
+  <h5 id="CodersRealm_NmsAmqpClient_ISubscriberManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ISubscriberManager</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ISubscriberManager_IsDisposed_" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager.IsDisposed*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ISubscriberManager_IsDisposed" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager.IsDisposed">IsDisposed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the object has been disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsDisposed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="CodersRealm_NmsAmqpClient_ISubscriberManager_IsDisposed_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this property to determine if the object is no longer usable due to disposal. Accessing
+members of a disposed object may result in exceptions.</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ISubscriberManager_CreateAsync_" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager.CreateAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ISubscriberManager_CreateAsync_CodersRealm_NmsAmqpClient_SubscriberOptions_" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager.CreateAsync(CodersRealm.NmsAmqpClient.SubscriberOptions)">CreateAsync(SubscriberOptions)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a new subscriber instance using the specified options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ISubscriber&gt; CreateAsync(SubscriberOptions subscriberOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberOptions.html">SubscriberOptions</a></td>
+        <td><span class="parametername">subscriberOptions</span></td>
+        <td><p>The configuration options used to initialize the subscriber. Cannot be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CodersRealm.NmsAmqpClient.ISubscriber.html">ISubscriber</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task result contains the created subscriber instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ISubscriberManager_CreateAsync_" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager.CreateAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ISubscriberManager_CreateAsync_CodersRealm_NmsAmqpClient_SubscriberOptions_CodersRealm_NmsAmqpClient_ResponderOptions_" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager.CreateAsync(CodersRealm.NmsAmqpClient.SubscriberOptions,CodersRealm.NmsAmqpClient.ResponderOptions)">CreateAsync(SubscriberOptions, ResponderOptions)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a new subscriber-responder instance using the specified subscriber and responder options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ISubscriber&gt; CreateAsync(SubscriberOptions subscriberOptions, ResponderOptions responderOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberOptions.html">SubscriberOptions</a></td>
+        <td><span class="parametername">subscriberOptions</span></td>
+        <td><p>The configuration options that define the behavior and settings for the subscriber. Cannot be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.ResponderOptions.html">ResponderOptions</a></td>
+        <td><span class="parametername">responderOptions</span></td>
+        <td><p>The configuration options that specify how the subscriber responds to messages. Cannot be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CodersRealm.NmsAmqpClient.ISubscriber.html">ISubscriber</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task result contains an <a class="xref" href="CodersRealm.NmsAmqpClient.ISubscriber.html">ISubscriber</a>
+instance configured with the provided options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ISubscriberManager_DeleteAsync_" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager.DeleteAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ISubscriberManager_DeleteAsync_System_Guid_" data-uid="CodersRealm.NmsAmqpClient.ISubscriberManager.DeleteAsync(System.Guid)">DeleteAsync(Guid)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously deletes (disposes) the subscriber identified by the specified tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteAsync(Guid subscriberTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">subscriberTag</span></td>
+        <td><p>The unique identifier of the subscriber to delete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that represents the asynchronous delete operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

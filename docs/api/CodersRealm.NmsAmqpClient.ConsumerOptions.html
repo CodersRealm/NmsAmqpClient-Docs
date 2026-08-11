@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ConsumerOptions | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ConsumerOptions | CodersRealm Docs ">
+    
+    <meta name="description" content="Options for configuring a message consumer of a queue.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-nms-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions">
+
+
+
+  <h1 id="CodersRealm_NmsAmqpClient_ConsumerOptions" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions" class="text-break">Class ConsumerOptions</h1>
+  <div class="markdown level0 summary"><p>Options for configuring a message consumer of a queue.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ConsumerOptions</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerOptions.html">ConsumerOptions</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.NmsAmqpClient.html">NmsAmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.NmsAmqpClient.dll</h6>
+  <h5 id="CodersRealm_NmsAmqpClient_ConsumerOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public record ConsumerOptions : IEquatable&lt;ConsumerOptions&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions__ctor_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.#ctor*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions__ctor_Apache_NMS_IQueue_System_String_System_String_System_Boolean_Apache_NMS_AcknowledgementMode_CodersRealm_NmsAmqpClient_OnMessageReceivedHandlerAsync_CodersRealm_NmsAmqpClient_OnErrorHandlerAsync_CodersRealm_NmsAmqpClient_ConsumerTransformerAsync_System_Nullable_System_TimeSpan__" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.#ctor(Apache.NMS.IQueue,System.String,System.String,System.Boolean,Apache.NMS.AcknowledgementMode,CodersRealm.NmsAmqpClient.OnMessageReceivedHandlerAsync,CodersRealm.NmsAmqpClient.OnErrorHandlerAsync,CodersRealm.NmsAmqpClient.ConsumerTransformerAsync,System.Nullable{System.TimeSpan})">ConsumerOptions(IQueue?, string?, string?, bool, AcknowledgementMode, OnMessageReceivedHandlerAsync?, OnErrorHandlerAsync?, ConsumerTransformerAsync?, TimeSpan?)</h4>
+  <div class="markdown level1 summary"><p>Options for configuring a message consumer of a queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerOptions(IQueue? Queue = null, string? QueueName = null, string? MessageSelector = null, bool NoLocalMessages = false, AcknowledgementMode AcknowledgementMode = AcknowledgementMode.AutoAcknowledge, OnMessageReceivedHandlerAsync? OnMessageReceivedAsync = null, OnErrorHandlerAsync? OnErrorAsync = null, ConsumerTransformerAsync? ConsumerTransformer = null, TimeSpan? TransformerTimeout = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IQueue</span></td>
+        <td><span class="parametername">Queue</span></td>
+        <td><p>The queue instance to consume from. If set, this takes precedence over <a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerOptions.html#CodersRealm_NmsAmqpClient_ConsumerOptions_QueueName">QueueName</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">QueueName</span></td>
+        <td><p>The name of the queue to consume from when <a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerOptions.html#CodersRealm_NmsAmqpClient_ConsumerOptions_Queue">Queue</a> is not provided.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">MessageSelector</span></td>
+        <td><p>A message selector expression used to filter messages delivered to the subscriber. See the underlying messaging provider for supported selector syntax.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">NoLocalMessages</span></td>
+        <td><p>If true, messages published from the same connection (local messages) will not be delivered to this consumer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">AcknowledgementMode</span></td>
+        <td><span class="parametername">AcknowledgementMode</span></td>
+        <td><p>The acknowledgement mode used by the consumer. Defaults to <span class="xref">Apache.NMS.AcknowledgementMode.AutoAcknowledge</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.OnMessageReceivedHandlerAsync.html">OnMessageReceivedHandlerAsync</a></td>
+        <td><span class="parametername">OnMessageReceivedAsync</span></td>
+        <td><p>Asynchronous handler invoked when a message is received.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.OnErrorHandlerAsync.html">OnErrorHandlerAsync</a></td>
+        <td><span class="parametername">OnErrorAsync</span></td>
+        <td><p>Asynchronous handler invoked when an error occurs while processing messages.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerTransformerAsync.html">ConsumerTransformerAsync</a></td>
+        <td><span class="parametername">ConsumerTransformer</span></td>
+        <td><p>Gets or sets the asynchronous transformer used to preprocess consumer messages. Note: Due to internal limitations, all your async calls from within the transformer must not capture the context and should use ConfigureAwait(false) to avoid deadlocks.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+        <td><span class="parametername">TransformerTimeout</span></td>
+        <td><p>Gets or sets the timeout duration for the consumer transformer. If a message transformation exceeds this duration, it will be considered failed. Defaults to <code>null</code>, which indicates to use a 5 second timeout.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_AcknowledgementMode_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.AcknowledgementMode*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_AcknowledgementMode" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.AcknowledgementMode">AcknowledgementMode</h4>
+  <div class="markdown level1 summary"><p>The acknowledgement mode used by the consumer. Defaults to <span class="xref">Apache.NMS.AcknowledgementMode.AutoAcknowledge</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AcknowledgementMode AcknowledgementMode { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AcknowledgementMode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_ConsumerTransformer_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.ConsumerTransformer*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_ConsumerTransformer" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.ConsumerTransformer">ConsumerTransformer</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the asynchronous transformer used to preprocess consumer messages. Note: Due to internal limitations, all your async calls from within the transformer must not capture the context and should use ConfigureAwait(false) to avoid deadlocks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerTransformerAsync? ConsumerTransformer { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerTransformerAsync.html">ConsumerTransformerAsync</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_MessageSelector_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.MessageSelector*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_MessageSelector" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.MessageSelector">MessageSelector</h4>
+  <div class="markdown level1 summary"><p>A message selector expression used to filter messages delivered to the subscriber. See the underlying messaging provider for supported selector syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? MessageSelector { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_NoLocalMessages_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.NoLocalMessages*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_NoLocalMessages" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.NoLocalMessages">NoLocalMessages</h4>
+  <div class="markdown level1 summary"><p>If true, messages published from the same connection (local messages) will not be delivered to this consumer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool NoLocalMessages { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_OnErrorAsync_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.OnErrorAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_OnErrorAsync" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.OnErrorAsync">OnErrorAsync</h4>
+  <div class="markdown level1 summary"><p>Asynchronous handler invoked when an error occurs while processing messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnErrorHandlerAsync? OnErrorAsync { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.OnErrorHandlerAsync.html">OnErrorHandlerAsync</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_OnMessageReceivedAsync_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.OnMessageReceivedAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_OnMessageReceivedAsync" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.OnMessageReceivedAsync">OnMessageReceivedAsync</h4>
+  <div class="markdown level1 summary"><p>Asynchronous handler invoked when a message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnMessageReceivedHandlerAsync? OnMessageReceivedAsync { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.OnMessageReceivedHandlerAsync.html">OnMessageReceivedHandlerAsync</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_Queue_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.Queue*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_Queue" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.Queue">Queue</h4>
+  <div class="markdown level1 summary"><p>The queue instance to consume from. If set, this takes precedence over <a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerOptions.html#CodersRealm_NmsAmqpClient_ConsumerOptions_QueueName">QueueName</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueue? Queue { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IQueue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_QueueName_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.QueueName*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_QueueName" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.QueueName">QueueName</h4>
+  <div class="markdown level1 summary"><p>The name of the queue to consume from when <a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerOptions.html#CodersRealm_NmsAmqpClient_ConsumerOptions_Queue">Queue</a> is not provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? QueueName { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ConsumerOptions_TransformerTimeout_" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.TransformerTimeout*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ConsumerOptions_TransformerTimeout" data-uid="CodersRealm.NmsAmqpClient.ConsumerOptions.TransformerTimeout">TransformerTimeout</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the timeout duration for the consumer transformer. If a message transformation exceeds this duration, it will be considered failed. Defaults to <code>null</code>, which indicates to use a 5 second timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? TransformerTimeout { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

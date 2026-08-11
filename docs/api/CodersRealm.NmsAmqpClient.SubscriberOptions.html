@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class SubscriberOptions | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class SubscriberOptions | CodersRealm Docs ">
+    
+    <meta name="description" content="Options used to configure a subscriber to a topic.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-nms-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions">
+
+
+
+  <h1 id="CodersRealm_NmsAmqpClient_SubscriberOptions" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions" class="text-break">Class SubscriberOptions</h1>
+  <div class="markdown level0 summary"><p>Options used to configure a subscriber to a topic.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">SubscriberOptions</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberOptions.html">SubscriberOptions</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.NmsAmqpClient.html">NmsAmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.NmsAmqpClient.dll</h6>
+  <h5 id="CodersRealm_NmsAmqpClient_SubscriberOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public record SubscriberOptions : IEquatable&lt;SubscriberOptions&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions__ctor_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.#ctor*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions__ctor_Apache_NMS_ITopic_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_Apache_NMS_AcknowledgementMode_CodersRealm_NmsAmqpClient_OnMessageReceivedHandlerAsync_CodersRealm_NmsAmqpClient_OnErrorHandlerAsync_CodersRealm_NmsAmqpClient_SubscriberTransformerAsync_System_Nullable_System_TimeSpan__" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.#ctor(Apache.NMS.ITopic,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,Apache.NMS.AcknowledgementMode,CodersRealm.NmsAmqpClient.OnMessageReceivedHandlerAsync,CodersRealm.NmsAmqpClient.OnErrorHandlerAsync,CodersRealm.NmsAmqpClient.SubscriberTransformerAsync,System.Nullable{System.TimeSpan})">SubscriberOptions(ITopic?, string?, string?, string?, bool, bool, bool, AcknowledgementMode, OnMessageReceivedHandlerAsync?, OnErrorHandlerAsync?, SubscriberTransformerAsync?, TimeSpan?)</h4>
+  <div class="markdown level1 summary"><p>Options used to configure a subscriber to a topic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SubscriberOptions(ITopic? Topic = null, string? TopicName = null, string? SubscriptionName = null, string? MessageSelector = null, bool NoLocalMessages = false, bool DurableSubscriber = false, bool SharedTopic = false, AcknowledgementMode AcknowledgementMode = AcknowledgementMode.AutoAcknowledge, OnMessageReceivedHandlerAsync? OnMessageReceivedAsync = null, OnErrorHandlerAsync? OnErrorAsync = null, SubscriberTransformerAsync? SubscriberTransformer = null, TimeSpan? TransformerTimeout = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITopic</span></td>
+        <td><span class="parametername">Topic</span></td>
+        <td><p>An <span class="xref">Apache.NMS.ITopic</span> instance to subscribe to. If provided, <a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberOptions.html#CodersRealm_NmsAmqpClient_SubscriberOptions_TopicName">TopicName</a> is not required.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">TopicName</span></td>
+        <td><p>The name of the topic to subscribe to when <a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberOptions.html#CodersRealm_NmsAmqpClient_SubscriberOptions_Topic">Topic</a> is not provided.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">SubscriptionName</span></td>
+        <td><p>The subscription name to use when creating a durable or named subscription.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">MessageSelector</span></td>
+        <td><p>A message selector expression used to filter messages delivered to the subscriber. See the underlying messaging provider for supported selector syntax.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">NoLocalMessages</span></td>
+        <td><p>When true, messages published by the same connection that created the subscriber will not be delivered to it. Defaults to <code>false</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">DurableSubscriber</span></td>
+        <td><p>When true, the subscriber will be created as durable. Durable subscribers survive client restarts when supported by the broker. Defaults to <code>false</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">SharedTopic</span></td>
+        <td><p>When true, the subscription will be shared among multiple consumers when the messaging provider supports shared topics. Defaults to <code>false</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">AcknowledgementMode</span></td>
+        <td><span class="parametername">AcknowledgementMode</span></td>
+        <td><p>The acknowledgement mode to use for the subscriber. Defaults to <span class="xref">Apache.NMS.AcknowledgementMode.AutoAcknowledge</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.OnMessageReceivedHandlerAsync.html">OnMessageReceivedHandlerAsync</a></td>
+        <td><span class="parametername">OnMessageReceivedAsync</span></td>
+        <td><p>Asynchronous handler invoked when a message is received for this subscriber.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.OnErrorHandlerAsync.html">OnErrorHandlerAsync</a></td>
+        <td><span class="parametername">OnErrorAsync</span></td>
+        <td><p>Asynchronous handler invoked when an error occurs related to this subscriber.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberTransformerAsync.html">SubscriberTransformerAsync</a></td>
+        <td><span class="parametername">SubscriberTransformer</span></td>
+        <td><p>Gets or sets the asynchronous transformer used to preprocess subscriber messages. Note: Due to internal limitations, all your async calls from within the transformer must not capture the context and should use ConfigureAwait(false) to avoid deadlocks.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+        <td><span class="parametername">TransformerTimeout</span></td>
+        <td><p>Gets or sets the timeout duration for the subscriber transformer. If a message transformation exceeds this duration, it will be considered failed. Defaults to <code>null</code>, which indicates to use a 5 second timeout.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_AcknowledgementMode_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.AcknowledgementMode*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_AcknowledgementMode" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.AcknowledgementMode">AcknowledgementMode</h4>
+  <div class="markdown level1 summary"><p>The acknowledgement mode to use for the subscriber. Defaults to <span class="xref">Apache.NMS.AcknowledgementMode.AutoAcknowledge</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AcknowledgementMode AcknowledgementMode { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AcknowledgementMode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_DurableSubscriber_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.DurableSubscriber*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_DurableSubscriber" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.DurableSubscriber">DurableSubscriber</h4>
+  <div class="markdown level1 summary"><p>When true, the subscriber will be created as durable. Durable subscribers survive client restarts when supported by the broker. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DurableSubscriber { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_MessageSelector_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.MessageSelector*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_MessageSelector" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.MessageSelector">MessageSelector</h4>
+  <div class="markdown level1 summary"><p>A message selector expression used to filter messages delivered to the subscriber. See the underlying messaging provider for supported selector syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? MessageSelector { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_NoLocalMessages_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.NoLocalMessages*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_NoLocalMessages" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.NoLocalMessages">NoLocalMessages</h4>
+  <div class="markdown level1 summary"><p>When true, messages published by the same connection that created the subscriber will not be delivered to it. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool NoLocalMessages { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_OnErrorAsync_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.OnErrorAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_OnErrorAsync" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.OnErrorAsync">OnErrorAsync</h4>
+  <div class="markdown level1 summary"><p>Asynchronous handler invoked when an error occurs related to this subscriber.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnErrorHandlerAsync? OnErrorAsync { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.OnErrorHandlerAsync.html">OnErrorHandlerAsync</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_OnMessageReceivedAsync_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.OnMessageReceivedAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_OnMessageReceivedAsync" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.OnMessageReceivedAsync">OnMessageReceivedAsync</h4>
+  <div class="markdown level1 summary"><p>Asynchronous handler invoked when a message is received for this subscriber.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnMessageReceivedHandlerAsync? OnMessageReceivedAsync { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.OnMessageReceivedHandlerAsync.html">OnMessageReceivedHandlerAsync</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_SharedTopic_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.SharedTopic*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_SharedTopic" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.SharedTopic">SharedTopic</h4>
+  <div class="markdown level1 summary"><p>When true, the subscription will be shared among multiple consumers when the messaging provider supports shared topics. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SharedTopic { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_SubscriberTransformer_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.SubscriberTransformer*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_SubscriberTransformer" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.SubscriberTransformer">SubscriberTransformer</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the asynchronous transformer used to preprocess subscriber messages. Note: Due to internal limitations, all your async calls from within the transformer must not capture the context and should use ConfigureAwait(false) to avoid deadlocks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SubscriberTransformerAsync? SubscriberTransformer { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberTransformerAsync.html">SubscriberTransformerAsync</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_SubscriptionName_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.SubscriptionName*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_SubscriptionName" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.SubscriptionName">SubscriptionName</h4>
+  <div class="markdown level1 summary"><p>The subscription name to use when creating a durable or named subscription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SubscriptionName { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_Topic_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.Topic*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_Topic" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.Topic">Topic</h4>
+  <div class="markdown level1 summary"><p>An <span class="xref">Apache.NMS.ITopic</span> instance to subscribe to. If provided, <a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberOptions.html#CodersRealm_NmsAmqpClient_SubscriberOptions_TopicName">TopicName</a> is not required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITopic? Topic { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITopic</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_TopicName_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.TopicName*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_TopicName" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.TopicName">TopicName</h4>
+  <div class="markdown level1 summary"><p>The name of the topic to subscribe to when <a class="xref" href="CodersRealm.NmsAmqpClient.SubscriberOptions.html#CodersRealm_NmsAmqpClient_SubscriberOptions_Topic">Topic</a> is not provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TopicName { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_SubscriberOptions_TransformerTimeout_" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.TransformerTimeout*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_SubscriberOptions_TransformerTimeout" data-uid="CodersRealm.NmsAmqpClient.SubscriberOptions.TransformerTimeout">TransformerTimeout</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the timeout duration for the subscriber transformer. If a message transformation exceeds this duration, it will be considered failed. Defaults to <code>null</code>, which indicates to use a 5 second timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? TransformerTimeout { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

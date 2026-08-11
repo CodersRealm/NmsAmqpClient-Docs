@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ProducerOptions | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ProducerOptions | CodersRealm Docs ">
+    
+    <meta name="description" content="Options used to configure a message producer.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-nms-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions">
+
+
+
+  <h1 id="CodersRealm_NmsAmqpClient_ProducerOptions" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions" class="text-break">Class ProducerOptions</h1>
+  <div class="markdown level0 summary"><p>Options used to configure a message producer.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ProducerOptions</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html">ProducerOptions</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.NmsAmqpClient.html">NmsAmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.NmsAmqpClient.dll</h6>
+  <h5 id="CodersRealm_NmsAmqpClient_ProducerOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public record ProducerOptions : IEquatable&lt;ProducerOptions&gt;</code></pre>
+  </div>
+  <h5 id="CodersRealm_NmsAmqpClient_ProducerOptions_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Note that acknowledgement modes other than <span class="xref">Apache.NMS.AcknowledgementMode.Transactional</span> are treated as <span class="xref">Apache.NMS.AcknowledgementMode.AutoAcknowledge</span>.</p>
+</div>
+  <h3 id="constructors">Constructors
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions__ctor_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.#ctor*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions__ctor_Apache_NMS_IDestination_System_String_System_Nullable_Apache_NMS_DestinationType__Apache_NMS_AcknowledgementMode_System_Boolean_System_Boolean_System_TimeSpan_Apache_NMS_MsgDeliveryMode_System_TimeSpan_Apache_NMS_MsgPriority_CodersRealm_NmsAmqpClient_ProducerTransformerAsync_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.#ctor(Apache.NMS.IDestination,System.String,System.Nullable{Apache.NMS.DestinationType},Apache.NMS.AcknowledgementMode,System.Boolean,System.Boolean,System.TimeSpan,Apache.NMS.MsgDeliveryMode,System.TimeSpan,Apache.NMS.MsgPriority,CodersRealm.NmsAmqpClient.ProducerTransformerAsync)">ProducerOptions(IDestination?, string?, DestinationType?, AcknowledgementMode, bool, bool, TimeSpan, MsgDeliveryMode, TimeSpan, MsgPriority, ProducerTransformerAsync?)</h4>
+  <div class="markdown level1 summary"><p>Options used to configure a message producer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProducerOptions(IDestination? Destination = null, string? DestinationName = null, DestinationType? DestinationType = null, AcknowledgementMode AcknowledgementMode = AcknowledgementMode.AutoAcknowledge, bool DisableMessageID = false, bool DisableMessageTimestamp = false, TimeSpan RequestTimeout = default, MsgDeliveryMode MsgDeliveryMode = MsgDeliveryMode.Persistent, TimeSpan MsgTimeToLive = default, MsgPriority MsgPriority = MsgPriority.Normal, ProducerTransformerAsync? ProducerTransformer = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDestination</span></td>
+        <td><span class="parametername">Destination</span></td>
+        <td><p>The destination instance to which messages will be sent. If <code>null</code>, the <a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html#CodersRealm_NmsAmqpClient_ProducerOptions_DestinationName">DestinationName</a> and
+<a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html#CodersRealm_NmsAmqpClient_ProducerOptions_DestinationType">DestinationType</a> may be used to resolve the destination at runtime.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">DestinationName</span></td>
+        <td><p>The name of the destination (queue or topic) to which messages will be sent. This is used when a destination
+instance is not provided via <a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html#CodersRealm_NmsAmqpClient_ProducerOptions_Destination">Destination</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DestinationType</span>?</td>
+        <td><span class="parametername">DestinationType</span></td>
+        <td><p>The type of the destination (for example, Queue or Topic). When set together with <a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html#CodersRealm_NmsAmqpClient_ProducerOptions_DestinationName">DestinationName</a>,
+it indicates how the named destination should be interpreted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">AcknowledgementMode</span></td>
+        <td><span class="parametername">AcknowledgementMode</span></td>
+        <td><p>The acknowledgement mode used by the producer. Defaults to <span class="xref">Apache.NMS.AcknowledgementMode.AutoAcknowledge</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">DisableMessageID</span></td>
+        <td><p>When true, the message ID will not be written to outgoing messages. Defaults to <code>false</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">DisableMessageTimestamp</span></td>
+        <td><p>When true, the message timestamp will not be written to outgoing messages. Defaults to <code>true</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">RequestTimeout</span></td>
+        <td><p>The request timeout to use for producer operations. A value of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> indicates no timeout.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MsgDeliveryMode</span></td>
+        <td><span class="parametername">MsgDeliveryMode</span></td>
+        <td><p>The delivery mode for produced messages (for example, persistent or non-persistent). Defaults to
+<span class="xref">Apache.NMS.MsgDeliveryMode.Persistent</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">MsgTimeToLive</span></td>
+        <td><p>The time-to-live for produced messages. A value of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> indicates the message does not
+expire.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MsgPriority</span></td>
+        <td><span class="parametername">MsgPriority</span></td>
+        <td><p>The priority assigned to produced messages. Defaults to <span class="xref">Apache.NMS.MsgPriority.Normal</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.ProducerTransformerAsync.html">ProducerTransformerAsync</a></td>
+        <td><span class="parametername">ProducerTransformer</span></td>
+        <td><p>Optional transformer delegate that can be used to modify or enrich a message before it is sent by the producer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="CodersRealm_NmsAmqpClient_ProducerOptions__ctor_Apache_NMS_IDestination_System_String_System_Nullable_Apache_NMS_DestinationType__Apache_NMS_AcknowledgementMode_System_Boolean_System_Boolean_System_TimeSpan_Apache_NMS_MsgDeliveryMode_System_TimeSpan_Apache_NMS_MsgPriority_CodersRealm_NmsAmqpClient_ProducerTransformerAsync__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note that acknowledgement modes other than <span class="xref">Apache.NMS.AcknowledgementMode.Transactional</span> are treated as <span class="xref">Apache.NMS.AcknowledgementMode.AutoAcknowledge</span>.</p>
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_AcknowledgementMode_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.AcknowledgementMode*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_AcknowledgementMode" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.AcknowledgementMode">AcknowledgementMode</h4>
+  <div class="markdown level1 summary"><p>The acknowledgement mode used by the producer. Defaults to <span class="xref">Apache.NMS.AcknowledgementMode.AutoAcknowledge</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AcknowledgementMode AcknowledgementMode { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AcknowledgementMode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_Destination_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.Destination*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_Destination" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.Destination">Destination</h4>
+  <div class="markdown level1 summary"><p>The destination instance to which messages will be sent. If <code>null</code>, the <a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html#CodersRealm_NmsAmqpClient_ProducerOptions_DestinationName">DestinationName</a> and
+<a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html#CodersRealm_NmsAmqpClient_ProducerOptions_DestinationType">DestinationType</a> may be used to resolve the destination at runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDestination? Destination { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDestination</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_DestinationName_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.DestinationName*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_DestinationName" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.DestinationName">DestinationName</h4>
+  <div class="markdown level1 summary"><p>The name of the destination (queue or topic) to which messages will be sent. This is used when a destination
+instance is not provided via <a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html#CodersRealm_NmsAmqpClient_ProducerOptions_Destination">Destination</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? DestinationName { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_DestinationType_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.DestinationType*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_DestinationType" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.DestinationType">DestinationType</h4>
+  <div class="markdown level1 summary"><p>The type of the destination (for example, Queue or Topic). When set together with <a class="xref" href="CodersRealm.NmsAmqpClient.ProducerOptions.html#CodersRealm_NmsAmqpClient_ProducerOptions_DestinationName">DestinationName</a>,
+it indicates how the named destination should be interpreted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DestinationType? DestinationType { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DestinationType</span>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_DisableMessageID_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.DisableMessageID*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_DisableMessageID" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.DisableMessageID">DisableMessageID</h4>
+  <div class="markdown level1 summary"><p>When true, the message ID will not be written to outgoing messages. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableMessageID { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_DisableMessageTimestamp_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.DisableMessageTimestamp*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_DisableMessageTimestamp" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.DisableMessageTimestamp">DisableMessageTimestamp</h4>
+  <div class="markdown level1 summary"><p>When true, the message timestamp will not be written to outgoing messages. Defaults to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableMessageTimestamp { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_MsgDeliveryMode_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.MsgDeliveryMode*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_MsgDeliveryMode" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.MsgDeliveryMode">MsgDeliveryMode</h4>
+  <div class="markdown level1 summary"><p>The delivery mode for produced messages (for example, persistent or non-persistent). Defaults to
+<span class="xref">Apache.NMS.MsgDeliveryMode.Persistent</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MsgDeliveryMode MsgDeliveryMode { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MsgDeliveryMode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_MsgPriority_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.MsgPriority*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_MsgPriority" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.MsgPriority">MsgPriority</h4>
+  <div class="markdown level1 summary"><p>The priority assigned to produced messages. Defaults to <span class="xref">Apache.NMS.MsgPriority.Normal</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MsgPriority MsgPriority { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MsgPriority</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_MsgTimeToLive_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.MsgTimeToLive*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_MsgTimeToLive" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.MsgTimeToLive">MsgTimeToLive</h4>
+  <div class="markdown level1 summary"><p>The time-to-live for produced messages. A value of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> indicates the message does not
+expire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan MsgTimeToLive { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_ProducerTransformer_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.ProducerTransformer*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_ProducerTransformer" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.ProducerTransformer">ProducerTransformer</h4>
+  <div class="markdown level1 summary"><p>Optional transformer delegate that can be used to modify or enrich a message before it is sent by the producer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProducerTransformerAsync? ProducerTransformer { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.NmsAmqpClient.ProducerTransformerAsync.html">ProducerTransformerAsync</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_ProducerOptions_RequestTimeout_" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.RequestTimeout*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_ProducerOptions_RequestTimeout" data-uid="CodersRealm.NmsAmqpClient.ProducerOptions.RequestTimeout">RequestTimeout</h4>
+  <div class="markdown level1 summary"><p>The request timeout to use for producer operations. A value of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> indicates no timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan RequestTimeout { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IConsumer | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IConsumer | CodersRealm Docs ">
+    
+    <meta name="description" content="Broker-backed message receiver exposing core, transport-agnostic operations for consuming messages and managing destinations.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-nms-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.NmsAmqpClient.IConsumer">
+
+
+
+  <h1 id="CodersRealm_NmsAmqpClient_IConsumer" data-uid="CodersRealm.NmsAmqpClient.IConsumer" class="text-break">Interface IConsumer</h1>
+  <div class="markdown level0 summary"><p>Broker-backed message receiver exposing core, transport-agnostic operations for consuming messages and managing destinations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.NmsAmqpClient.html">NmsAmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.NmsAmqpClient.dll</h6>
+  <h5 id="CodersRealm_NmsAmqpClient_IConsumer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IConsumer</code></pre>
+  </div>
+  <h5 id="CodersRealm_NmsAmqpClient_IConsumer_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Acknowledgement and transaction controls are omitted; use TryAs/AsXxx helpers to acquire those capabilities when available.</p>
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IConsumer_AcknowledgementMode_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.AcknowledgementMode*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IConsumer_AcknowledgementMode" data-uid="CodersRealm.NmsAmqpClient.IConsumer.AcknowledgementMode">AcknowledgementMode</h4>
+  <div class="markdown level1 summary"><p>The acknowledgement mode configured for this message receiver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AcknowledgementMode AcknowledgementMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AcknowledgementMode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IConsumer_IsDisposed_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.IsDisposed*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IConsumer_IsDisposed" data-uid="CodersRealm.NmsAmqpClient.IConsumer.IsDisposed">IsDisposed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this has been disposed and is no longer usable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsDisposed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IConsumer_IsRunning_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.IsRunning*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IConsumer_IsRunning" data-uid="CodersRealm.NmsAmqpClient.IConsumer.IsRunning">IsRunning</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether currently running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsRunning { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IConsumer_Tag_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.Tag*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IConsumer_Tag" data-uid="CodersRealm.NmsAmqpClient.IConsumer.Tag">Tag</h4>
+  <div class="markdown level1 summary"><p>A unique identifier for this message receiver instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid Tag { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IConsumer_CreateTemporaryQueueAsync_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.CreateTemporaryQueueAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IConsumer_CreateTemporaryQueueAsync" data-uid="CodersRealm.NmsAmqpClient.IConsumer.CreateTemporaryQueueAsync">CreateTemporaryQueueAsync()</h4>
+  <div class="markdown level1 summary"><p>Create a temporary queue bound to the underlying connection/session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITemporaryQueue?&gt; CreateTemporaryQueueAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ITemporaryQueue</span>&gt;</td>
+        <td><p>The created <span class="xref">Apache.NMS.ITemporaryQueue</span> or <code>null</code> if creation failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IConsumer_CreateTemporaryTopicAsync_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.CreateTemporaryTopicAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IConsumer_CreateTemporaryTopicAsync" data-uid="CodersRealm.NmsAmqpClient.IConsumer.CreateTemporaryTopicAsync">CreateTemporaryTopicAsync()</h4>
+  <div class="markdown level1 summary"><p>Create a temporary topic bound to the underlying connection/session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITemporaryTopic?&gt; CreateTemporaryTopicAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ITemporaryTopic</span>&gt;</td>
+        <td><p>The created <span class="xref">Apache.NMS.ITemporaryTopic</span> or <code>null</code> if creation failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IConsumer_GetQueueAsync_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.GetQueueAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IConsumer_GetQueueAsync_System_String_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.GetQueueAsync(System.String)">GetQueueAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Resolve a named queue on the broker and return an <span class="xref">Apache.NMS.IQueue</span> reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IQueue?&gt; GetQueueAsync(string queueName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">queueName</span></td>
+        <td><p>The name of the queue to resolve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IQueue</span>&gt;</td>
+        <td><p>The resolved <span class="xref">Apache.NMS.IQueue</span> or <code>null</code> if not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown when <code class="paramref">queueName</code> is null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IConsumer_GetTopicAsync_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.GetTopicAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IConsumer_GetTopicAsync_System_String_" data-uid="CodersRealm.NmsAmqpClient.IConsumer.GetTopicAsync(System.String)">GetTopicAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Resolve a named topic on the broker and return an <span class="xref">Apache.NMS.ITopic</span> reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITopic?&gt; GetTopicAsync(string topicName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">topicName</span></td>
+        <td><p>The name of the topic to resolve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ITopic</span>&gt;</td>
+        <td><p>The resolved <span class="xref">Apache.NMS.ITopic</span> or <code>null</code> if not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown when <code class="paramref">topicName</code> is null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerExtensions.html#CodersRealm_NmsAmqpClient_ConsumerExtensions_AsAcknowledge_CodersRealm_NmsAmqpClient_IConsumer_">ConsumerExtensions.AsAcknowledge(IConsumer)</a>
+  </div>
+  <div>
+      <a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerExtensions.html#CodersRealm_NmsAmqpClient_ConsumerExtensions_AsTransactional_CodersRealm_NmsAmqpClient_IConsumer_">ConsumerExtensions.AsTransactional(IConsumer)</a>
+  </div>
+  <div>
+      <a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerExtensions.html#CodersRealm_NmsAmqpClient_ConsumerExtensions_TryAsAcknowledge_CodersRealm_NmsAmqpClient_IConsumer_CodersRealm_NmsAmqpClient_IAcknowledgeConsumer__">ConsumerExtensions.TryAsAcknowledge(IConsumer, out IAcknowledgeConsumer?)</a>
+  </div>
+  <div>
+      <a class="xref" href="CodersRealm.NmsAmqpClient.ConsumerExtensions.html#CodersRealm_NmsAmqpClient_ConsumerExtensions_TryAsTransactional_CodersRealm_NmsAmqpClient_IConsumer_CodersRealm_NmsAmqpClient_ITransactionalConsumer__">ConsumerExtensions.TryAsTransactional(IConsumer, out ITransactionalConsumer?)</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

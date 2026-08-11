@@ -1,0 +1,12 @@
+/* Target the logo image inside the top navigation bar */
+#logo {
+    height: 33px;       /* Forces the logo to stay a clean, standard header height */
+    width: auto;        /* Dynamically calculates width so the image never stretches out of proportion */
+    max-width: 100%;    /* Tells the image to shrink to fit perfectly if the screen goes small */
+    object-fit: contain; /* Ensures the entire image is visible inside its bounding box */
+
+/*  padding-top: 2px;   Optional: Adjusts vertical spacing to align perfectly with header text 
+    padding-bottom: 2px; 
+*/
+    margin-top: 8px;
+}

@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IProducer | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IProducer | CodersRealm Docs ">
+    
+    <meta name="description" content="Defines the contract for a message producer that creates and sends messages to queues or topics in a messaging system. Provides asynchronous methods for message creation, sending, and transaction management. Implementations are expected to be safe for concurrent use and to honor cancellation semantics where applicable.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-nms-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.NmsAmqpClient.IProducer">
+
+
+
+  <h1 id="CodersRealm_NmsAmqpClient_IProducer" data-uid="CodersRealm.NmsAmqpClient.IProducer" class="text-break">Interface IProducer</h1>
+  <div class="markdown level0 summary"><p>Defines the contract for a message producer that creates and sends messages to queues or topics in a messaging
+system. Provides asynchronous methods for message creation, sending, and transaction management.
+Implementations are expected to be safe for concurrent use and to honor cancellation semantics where applicable.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.NmsAmqpClient.html">NmsAmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.NmsAmqpClient.dll</h6>
+  <h5 id="CodersRealm_NmsAmqpClient_IProducer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IProducer</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_IsDisposed_" data-uid="CodersRealm.NmsAmqpClient.IProducer.IsDisposed*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_IsDisposed" data-uid="CodersRealm.NmsAmqpClient.IProducer.IsDisposed">IsDisposed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this producer has been disposed and is no longer usable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsDisposed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_IsRunning_" data-uid="CodersRealm.NmsAmqpClient.IProducer.IsRunning*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_IsRunning" data-uid="CodersRealm.NmsAmqpClient.IProducer.IsRunning">IsRunning</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the producer is currently running and able to send messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsRunning { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_Tag_" data-uid="CodersRealm.NmsAmqpClient.IProducer.Tag*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_Tag" data-uid="CodersRealm.NmsAmqpClient.IProducer.Tag">Tag</h4>
+  <div class="markdown level1 summary"><p>Gets a unique identifier for this producer instance. Useful for diagnostics and logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid Tag { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CommitAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CommitAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CommitAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.CommitAsync">CommitAsync()</h4>
+  <div class="markdown level1 summary"><p>Commits the current transaction, if the producer is operating in a transactional mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task CommitAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that completes when the commit operation has finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateBytesMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateBytesMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateBytesMessageAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateBytesMessageAsync">CreateBytesMessageAsync()</h4>
+  <div class="markdown level1 summary"><p>Creates a new bytes message instance asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IBytesMessage&gt; CreateBytesMessageAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IBytesMessage</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.IBytesMessage</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateBytesMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateBytesMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateBytesMessageAsync_System_Byte___" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateBytesMessageAsync(System.Byte[])">CreateBytesMessageAsync(byte[])</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a new bytes message with the specified body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IBytesMessage&gt; CreateBytesMessageAsync(byte[] body)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">body</span></td>
+        <td><p>The byte array containing the message payload. Cannot be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IBytesMessage</span>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task result contains an <span class="xref">Apache.NMS.IBytesMessage</span>
+instance initialized with the specified body.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateMapMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateMapMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateMapMessageAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateMapMessageAsync">CreateMapMessageAsync()</h4>
+  <div class="markdown level1 summary"><p>Creates a new map message instance asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IMapMessage&gt; CreateMapMessageAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IMapMessage</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.IMapMessage</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateMessageAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateMessageAsync">CreateMessageAsync()</h4>
+  <div class="markdown level1 summary"><p>Creates a generic message instance asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IMessage&gt; CreateMessageAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IMessage</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.IMessage</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateObjectMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateObjectMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateObjectMessageAsync_System_Object_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateObjectMessageAsync(System.Object)">CreateObjectMessageAsync(object)</h4>
+  <div class="markdown level1 summary"><p>Creates an object message that wraps the provided object instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IObjectMessage&gt; CreateObjectMessageAsync(object dataObject)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">dataObject</span></td>
+        <td><p>The object to include in the message payload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IObjectMessage</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.IObjectMessage</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateStreamMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateStreamMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateStreamMessageAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateStreamMessageAsync">CreateStreamMessageAsync()</h4>
+  <div class="markdown level1 summary"><p>Creates a stream message instance asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IStreamMessage&gt; CreateStreamMessageAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IStreamMessage</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.IStreamMessage</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateTemporaryQueueAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateTemporaryQueueAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateTemporaryQueueAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateTemporaryQueueAsync">CreateTemporaryQueueAsync()</h4>
+  <div class="markdown level1 summary"><p>Creates a temporary queue for use by this producer. The returned queue may be null if the
+underlying provider does not support temporary destinations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITemporaryQueue?&gt; CreateTemporaryQueueAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ITemporaryQueue</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.ITemporaryQueue</span>, or null if not supported.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateTemporaryTopicAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateTemporaryTopicAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateTemporaryTopicAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateTemporaryTopicAsync">CreateTemporaryTopicAsync()</h4>
+  <div class="markdown level1 summary"><p>Creates a temporary topic for use by this producer. The returned topic may be null if the
+underlying provider does not support temporary destinations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITemporaryTopic?&gt; CreateTemporaryTopicAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ITemporaryTopic</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.ITemporaryTopic</span>, or null if not supported.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateTextMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateTextMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateTextMessageAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateTextMessageAsync">CreateTextMessageAsync()</h4>
+  <div class="markdown level1 summary"><p>Creates an empty text message instance asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITextMessage&gt; CreateTextMessageAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ITextMessage</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.ITextMessage</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_CreateTextMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateTextMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_CreateTextMessageAsync_System_String_" data-uid="CodersRealm.NmsAmqpClient.IProducer.CreateTextMessageAsync(System.String)">CreateTextMessageAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Creates a text message with the provided text content asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITextMessage&gt; CreateTextMessageAsync(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text content for the message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ITextMessage</span>&gt;</td>
+        <td><p>A task that completes with the created <span class="xref">Apache.NMS.ITextMessage</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_GetQueueAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.GetQueueAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_GetQueueAsync_System_String_" data-uid="CodersRealm.NmsAmqpClient.IProducer.GetQueueAsync(System.String)">GetQueueAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a queue by name from the messaging provider. Returns null if the queue cannot be found
+or created by the provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IQueue?&gt; GetQueueAsync(string queueName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">queueName</span></td>
+        <td><p>The name of the queue to retrieve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IQueue</span>&gt;</td>
+        <td><p>A task that completes with the <span class="xref">Apache.NMS.IQueue</span> instance or null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_GetTopicAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.GetTopicAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_GetTopicAsync_System_String_" data-uid="CodersRealm.NmsAmqpClient.IProducer.GetTopicAsync(System.String)">GetTopicAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a topic by name from the messaging provider. Returns null if the topic cannot be found
+or created by the provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITopic?&gt; GetTopicAsync(string topicName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">topicName</span></td>
+        <td><p>The name of the topic to retrieve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ITopic</span>&gt;</td>
+        <td><p>A task that completes with the <span class="xref">Apache.NMS.ITopic</span> instance or null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_RollbackAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.RollbackAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_RollbackAsync" data-uid="CodersRealm.NmsAmqpClient.IProducer.RollbackAsync">RollbackAsync()</h4>
+  <div class="markdown level1 summary"><p>Rolls back the current transaction, if the producer is operating in a transactional mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task RollbackAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that completes when the rollback operation has finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_Apache_NMS_IMessage_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync(Apache.NMS.IMessage)">SendMessageAsync(IMessage)</h4>
+  <div class="markdown level1 summary"><p>Sends a message using the producer's default destination and delivery settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SendMessageAsync(IMessage message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMessage</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that completes when the send operation has finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_Apache_NMS_IMessage_Apache_NMS_IDestination_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync(Apache.NMS.IMessage,Apache.NMS.IDestination)">SendMessageAsync(IMessage, IDestination)</h4>
+  <div class="markdown level1 summary"><p>Sends a message to a specific destination instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SendMessageAsync(IMessage message, IDestination destination)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMessage</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDestination</span></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination to send the message to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that completes when the send operation has finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_Apache_NMS_IMessage_Apache_NMS_IDestination_Apache_NMS_MsgDeliveryMode_Apache_NMS_MsgPriority_System_TimeSpan_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync(Apache.NMS.IMessage,Apache.NMS.IDestination,Apache.NMS.MsgDeliveryMode,Apache.NMS.MsgPriority,System.TimeSpan)">SendMessageAsync(IMessage, IDestination, MsgDeliveryMode, MsgPriority, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sends a message to a specific destination instance with explicit delivery settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SendMessageAsync(IMessage message, IDestination destination, MsgDeliveryMode deliveryMode, MsgPriority priority, TimeSpan timeToLive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMessage</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDestination</span></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination to send the message to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MsgDeliveryMode</span></td>
+        <td><span class="parametername">deliveryMode</span></td>
+        <td><p>The delivery mode to use for the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MsgPriority</span></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority to use for the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">timeToLive</span></td>
+        <td><p>The time-to-live for the message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that completes when the send operation has finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_Apache_NMS_IMessage_Apache_NMS_MsgDeliveryMode_Apache_NMS_MsgPriority_System_TimeSpan_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync(Apache.NMS.IMessage,Apache.NMS.MsgDeliveryMode,Apache.NMS.MsgPriority,System.TimeSpan)">SendMessageAsync(IMessage, MsgDeliveryMode, MsgPriority, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sends a message with explicit delivery mode, priority, and time-to-live settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SendMessageAsync(IMessage message, MsgDeliveryMode deliveryMode, MsgPriority priority, TimeSpan timeToLive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMessage</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MsgDeliveryMode</span></td>
+        <td><span class="parametername">deliveryMode</span></td>
+        <td><p>The delivery mode to use for the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MsgPriority</span></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority to use for the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">timeToLive</span></td>
+        <td><p>The time-to-live for the message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that completes when the send operation has finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_Apache_NMS_IMessage_System_String_Apache_NMS_DestinationType_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync(Apache.NMS.IMessage,System.String,Apache.NMS.DestinationType)">SendMessageAsync(IMessage, string, DestinationType)</h4>
+  <div class="markdown level1 summary"><p>Sends a message to a destination identified by name and type (queue or topic).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SendMessageAsync(IMessage message, string destinationName, DestinationType destinationType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMessage</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">destinationName</span></td>
+        <td><p>The name of the destination (queue or topic).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DestinationType</span></td>
+        <td><span class="parametername">destinationType</span></td>
+        <td><p>The type of the destination.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that completes when the send operation has finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync*"></a>
+  <h4 id="CodersRealm_NmsAmqpClient_IProducer_SendMessageAsync_Apache_NMS_IMessage_System_String_Apache_NMS_DestinationType_Apache_NMS_MsgDeliveryMode_Apache_NMS_MsgPriority_System_TimeSpan_" data-uid="CodersRealm.NmsAmqpClient.IProducer.SendMessageAsync(Apache.NMS.IMessage,System.String,Apache.NMS.DestinationType,Apache.NMS.MsgDeliveryMode,Apache.NMS.MsgPriority,System.TimeSpan)">SendMessageAsync(IMessage, string, DestinationType, MsgDeliveryMode, MsgPriority, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sends a message to a destination identified by name and type using explicit delivery settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SendMessageAsync(IMessage message, string destinationName, DestinationType destinationType, MsgDeliveryMode deliveryMode, MsgPriority priority, TimeSpan timeToLive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMessage</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">destinationName</span></td>
+        <td><p>The name of the destination (queue or topic).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DestinationType</span></td>
+        <td><span class="parametername">destinationType</span></td>
+        <td><p>The type of the destination.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MsgDeliveryMode</span></td>
+        <td><span class="parametername">deliveryMode</span></td>
+        <td><p>The delivery mode to use for the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MsgPriority</span></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority to use for the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">timeToLive</span></td>
+        <td><p>The time-to-live for the message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that completes when the send operation has finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
