@@ -1,0 +1,50 @@
+[END USER LICENSE AGREEMENT (EULA)]
+
+Product: CodersRealm.NmsAmqpClient  
+Copyright (c) 2026 CodersRealm.com. All rights reserved.
+
+IMPORTANT: PLEASE READ THIS AGREEMENT CAREFULLY BEFORE INSTALLING OR USING THIS NUGET PACKAGE. BY INSTALLING, COPYING, OR OTHERWISE USING THIS SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT INSTALL OR USE THE SOFTWARE.
+
+1. LICENSE GRANT AND USAGE TIERS
+
+(a) Free Tier Grant: Subject to the terms of this Agreement, Licensor grants you a limited, non-exclusive, revocable license to install, use, and redistribute the compiled binaries (.dll) contained within this NuGet package, solely as embedded components integrated into your own software applications.
+
+(b) Permitted Uses: You may use and redistribute the software under this Free Tier authorization solely for:
+- Personal or educational projects.
+- Internal testing, evaluation, and development environments.
+- Commercial production applications, provided that your individual or corporate entity generates less than $10,000 USD (or local equivalent) in gross annual revenue.
+- Redistribution and deployment of the compiled binaries (.dll) to end-users, provided the software is integrated as a dependent component within a larger, substantive software application developed by you.
+
+2. COMMERCIAL TIER REQUIREMENT
+
+If your usage or corporate revenue exceeds the thresholds defined in Section 1(b), or if you require dedicated technical support, enterprise deployment rights, or formal service level agreements (SLAs) from the Licensor, your authorization under the Free Tier automatically terminates. 
+
+Your continued use, deployment, or redistribution of the software requires the purchase of a Commercial License. The $10,000 USD revenue limit applies strictly to the entity developing and distributing the application utilizing this package, not to the ultimate end-users of your application. Commercial licenses and corporate procurement agreements are available by contacting us at: sales@codersrealm.com
+
+3. RESTRICTIONS ON USE
+
+You shall not, and shall not permit any third party to:
+
+(a) Decompile, disassemble, reverse engineer, or otherwise attempt to derive the source code of the software contained in this package.
+
+(b) Modify, adapt, alter, or create derivative works based upon the software.
+
+(c) Redistribute, rent, lease, lend, sell, or sublicense this package as a standalone product, as a raw development component, or as part of a competing software development library. Redistribution is permitted only when embedded within your compiled, final-user software application.
+
+(d) Remove, alter, or obscure any copyright, trademark, or other proprietary notices embedded in or on the software.
+
+4. OWNERSHIP OF INTELLECTUAL PROPERTY
+
+The software, its architecture, and all underlying source code are and shall remain the sole and exclusive property of Licensor. This Agreement does not grant you any ownership rights in the software, but only a limited right of use and redistribution revocable in accordance with the terms of this Agreement.
+
+5. TERMINATION
+
+This Agreement is effective until terminated. Your rights under this license will terminate automatically without notice from the Licensor if you fail to comply with any term(s) of this Agreement, including exceeding the revenue or usage limits defined in Section 1. Upon termination, you must cease all use and distribution of the software and destroy all copies of the package in your possession.
+
+6. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+7. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR INABILITY TO USE THIS SOFTWARE PRODUCT.
