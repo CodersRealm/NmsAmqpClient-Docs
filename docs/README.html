@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>&#128640; DocFX Documentation Deployment Script | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="&#128640; DocFX Documentation Deployment Script | CodersRealm Docs ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="images/codersrealm-nms-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="-docfx-documentation-deployment-script">🚀 DocFX Documentation Deployment Script</h1>
+
+<p>This repository contains a PowerShell automation script designed to compile your C# source code XML comments into static HTML documentation using <strong>DocFX</strong>, and seamlessly deploy those assets to a completely separate GitHub documentation repository.</p>
+<p>By using a cross-repository layout and an <strong>orphan branch</strong>, your source history remains perfectly clean while your website stays completely isolated.</p>
+<hr>
+<h2 id="-architecture--how-it-works">🛠️ Architecture &amp; How It Works</h2>
+<ol>
+<li><strong>Clean Slate:</strong> The script empties the target documentation repository using a custom function (<code>Clear-VisibleFolderContents</code>) that protects hidden files like your <code>.git</code> history.</li>
+<li><strong>Safe Branch Swapping:</strong> It switches the target repository to the <code>gh-pages</code> branch.</li>
+<li><strong>Compilation:</strong> It triggers <code>docfx metadata</code> and <code>docfx build</code> from your project folder, rendering the website directly into the <code>/docs</code> folder of your target repository.</li>
+<li><strong>Force Deployment:</strong> It stages, commits, and <strong>force-pushes</strong> (<code>git push -f</code>) the fresh HTML files directly to GitHub.</li>
+<li><strong>Reset:</strong> It cleans the folder one more time and returns the target repository safely back to the <code>main</code> branch so your workspace stays pristine.</li>
+</ol>
+<hr>
+<h2 id="-prerequisites">📋 Prerequisites</h2>
+<p>Before running the script, ensure you have the following installed on your machine:</p>
+<ul>
+<li><strong>PowerShell 7+</strong> (Recommended) or Windows PowerShell</li>
+<li><strong>Git</strong> (Configured with access to your GitHub account)</li>
+<li><strong>DocFX CLI</strong> (Added to your system's Environment Variables <code>PATH</code>)</li>
+</ul>
+<hr>
+<h2 id="-repository-setup">⚙️ Repository Setup</h2>
+<p>To ensure the script runs flawlessly, your local folders <strong>must</strong> be organized exactly like this on your hard drive:</p>
+<pre><code class="lang-text">📁 Your-Development-Directory/
+├── 📁 NmsAmqpClient/           &lt;-- This repository (Contains the source code and script)
+│   ├── docfx.json
+│   └── deploy-docs.ps1
+└── 📁 NmsAmqpClient-Docs/      &lt;-- The dedicated documentation repository
+    ├── .git/
+    └── docs/                   &lt;-- GitHub Pages reads from this folder
+</code></pre>
+<h3 id="github-pages-configuration">GitHub Pages Configuration</h3>
+<ol>
+<li>Go to your <strong>NmsAmqpClient-Docs</strong> repository on GitHub.</li>
+<li>Navigate to <strong>Settings</strong> &gt; <strong>Pages</strong>.</li>
+<li>Under <em>Build and deployment</em>, set the Source to <strong>Deploy from a branch</strong>.</li>
+<li>Set the Branch to <strong><code>gh-pages</code></strong> and the folder to <strong><code>/docs</code></strong>.</li>
+</ol>
+<hr>
+<h2 id="-how-to-run-the-script">🚀 How to Run the Script</h2>
+<p>Open a PowerShell terminal, navigate to your project directory, and execute the script:</p>
+<pre><code class="lang-powershell">./deploy-docs.ps1
+</code></pre>
+<h3 id="-note-on-line-ending-warnings">🤫 Note on Line Ending Warnings</h3>
+<p>The script automatically configures your local Git environment using these flags:</p>
+<pre><code class="lang-powershell">git config core.safecrlf false
+git config core.autocrlf false
+</code></pre>
+<p>This guarantees that DocFX's native <strong>LF</strong> web assets are accepted by Git silently, completely preventing terminal flooding and keeping your build logs clean.</p>
+<hr>
+<h2 id="-important-considerations">⚠️ Important Considerations</h2>
+<ul>
+<li><strong>Overwriting Remote History:</strong> The script uses a <strong>force-push</strong> (<code>git push -f</code>). It will completely overwrite whatever is currently on the GitHub <code>gh-pages</code> branch with your latest local build.</li>
+<li><strong>Zero Commit Protection:</strong> The script includes a safety check that scans for code changes. If you run the script and your source code hasn't changed, it will cleanly skip the Git commit and push phases to prevent script crashes.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
