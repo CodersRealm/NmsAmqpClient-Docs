@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: '10.0.x'
 
@@ -33,7 +33,9 @@ jobs:
           # Points the login step to the testing sandbox environment
           #nuget-server-url: https://nugettest.org
           #nuget-url: https://nugettest.org
-          nuget-url: https://api.nugettest.org/v3/index.json
+          #nuget-url: https://api.nugettest.org/v3/index.json
+          token-service-url: https://nugettest.org
+          audience: https://nugettest.org
 
       # Push the binary directly to the target environment using the temporary key
       # Comment this section out once sandbox testing is complete.
