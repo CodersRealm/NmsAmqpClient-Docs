@@ -32,13 +32,14 @@ jobs:
           user: CodersRealm 
           # Points the login step to the testing sandbox environment
           #nuget-server-url: https://nugettest.org
-          nuget-url: https://nugettest.org
+          #nuget-url: https://nugettest.org
+          nuget-url: https://api.nugettest.org/v3/index.json
 
       # Push the binary directly to the target environment using the temporary key
       # Comment this section out once sandbox testing is complete.
       - name: Push to NuGet Sandbox
         run: |
-          dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://nugettest.org/v3/index.json
+          dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://api.nugettest.org/v3/index.json
 
 
 # name: publish-to-nuget
@@ -76,7 +77,7 @@ jobs:
 #
 #       - name: Push to NuGet Sandbox
 #         run: |
-#           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://nugettest.org/v3/index.json
+#           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://api.nugettest.org/v3/index.json
 
 #   # 🚀 STAGE 2: Paused Push to Live Production (Awaits your approval click)
 #   deploy-to-production:
@@ -108,4 +109,4 @@ jobs:
 
 #       - name: Push to NuGet Production
 #         run: |
-#           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_production.outputs.NUGET_API_KEY }} --source https://nuget.org/v3/index.json
+#           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_production.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
