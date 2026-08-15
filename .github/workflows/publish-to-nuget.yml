@@ -1,0 +1,109 @@
+name: publish-to-nuget
+on:
+  release:
+    types: [published] # Fires automatically when your script finishes 'gh release create'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # CRITICAL: Allows GitHub to ask NuGet for a dynamic security token
+      contents: read
+
+    steps:
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      # Download the .nupkg file that your PowerShell script attached to the release
+      - name: Fetch NuGet Asset from Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release download ${{ github.event.release.tag_name }} --pattern "*.nupkg" --dir ./packages --repo ${{ github.repository }}
+
+      # Exchange your GitHub identity token for a temporary NuGet Sandbox API Key
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          # Put your exact NuGet.org username/profile name here (NOT your email)
+          user: CodersRealm 
+          # Points the login step to the testing sandbox environment
+          nuget-server-url: https://nugettest.org
+
+      # Push the binary directly to the target environment using the temporary key
+      # Comment this section out once sandbox testing is complete.
+      - name: Push to NuGet Sandbox
+        run: |
+          dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://nugettest.org/v3/index.json
+
+
+# name: publish-to-nuget
+# on:
+#   release:
+#     types: [published] # Fires when your local script executes 'gh release create'
+
+# jobs:
+#   # 🧪 STAGE 1: Automated Push to the Testing Sandbox
+#   deploy-to-sandbox:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       id-token: write
+#       contents: read
+
+#     steps:
+#       - name: Setup .NET SDK
+#         uses: actions/setup-dotnet@v4
+#         with:
+#           dotnet-version: '10.0.x'
+
+#       - name: Fetch NuGet Asset from Release
+#         env:
+#           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           gh release download ${{ github.event.release.tag_name }} --pattern "*.nupkg" --dir ./packages --repo ${{ github.repository }}
+
+#       - name: NuGet Sandbox Login
+#         uses: NuGet/login@v1
+#         id: login_sandbox
+#         with:
+#           user: CodersRealm
+#           nuget-server-url: https://nugettest.org
+
+#       - name: Push to NuGet Sandbox
+#         run: |
+#           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://nugettest.org/v3/index.json
+
+#   # 🚀 STAGE 2: Paused Push to Live Production (Awaits your approval click)
+#   deploy-to-production:
+#     runs-on: ubuntu-latest
+#     needs: deploy-to-sandbox # 👈 Wait until Stage 1 completely finishes
+#     environment: production  # 👈 Triggers the Manual Approval rule you created in Step 1
+#     permissions:
+#       id-token: write
+#       contents: read
+
+#     steps:
+#       - name: Setup .NET SDK
+#         uses: actions/setup-dotnet@v4
+#         with:
+#           dotnet-version: '10.0.x'
+
+#       - name: Fetch NuGet Asset from Release
+#         env:
+#           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           gh release download ${{ github.event.release.tag_name }} --pattern "*.nupkg" --dir ./packages --repo ${{ github.repository }}
+
+#       - name: NuGet Production Login
+#         uses: NuGet/login@v1
+#         id: login_production
+#         with:
+#           user: CodersRealm
+#           nuget-server-url: https://nuget.org
+
+#       - name: Push to NuGet Production
+#         run: |
+#           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_production.outputs.NUGET_API_KEY }} --source https://nuget.org/v3/index.json
