@@ -26,12 +26,13 @@ jobs:
       # Exchange your GitHub identity token for a temporary NuGet Sandbox API Key
       - name: NuGet login (OIDC → temp API key)
         uses: NuGet/login@v1
-        id: login
+        id: login_sandbox
         with:
           # Put your exact NuGet.org username/profile name here (NOT your email)
           user: CodersRealm 
           # Points the login step to the testing sandbox environment
-          nuget-server-url: https://nugettest.org
+          #nuget-server-url: https://nugettest.org
+          nuget-url: https://nugettest.org
 
       # Push the binary directly to the target environment using the temporary key
       # Comment this section out once sandbox testing is complete.
@@ -70,8 +71,9 @@ jobs:
 #         id: login_sandbox
 #         with:
 #           user: CodersRealm
-#           nuget-server-url: https://nugettest.org
-
+#           #nuget-server-url: https://nugettest.org
+#           nuget-url: https://nugettest.org 
+#
 #       - name: Push to NuGet Sandbox
 #         run: |
 #           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://nugettest.org/v3/index.json
