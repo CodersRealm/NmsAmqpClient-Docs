@@ -31,14 +31,11 @@ jobs:
           # Put your exact NuGet.org username/profile name here (NOT your email)
           user: CodersRealm 
           # Points the login step to the testing sandbox environment
-          #nuget-server-url: https://nugettest.org
-          #nuget-url: https://nugettest.org
-          #nuget-url: https://api.nugettest.org/v3/index.json
-          token-service-url: https://nugettest.org
-          audience: https://nugettest.org
+          nuget-server-url: https://nugettest.org
+          token-service-url: https://www.nugettest.org/api/v2/token
+          audience: https://www.nugettest.org
 
       # Push the binary directly to the target environment using the temporary key
-      # Comment this section out once sandbox testing is complete.
       - name: Push to NuGet Sandbox
         run: |
           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://api.nugettest.org/v3/index.json
