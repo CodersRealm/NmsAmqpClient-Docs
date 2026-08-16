@@ -1,44 +1,84 @@
 name: publish-to-nuget
 on:
   release:
-    types: [published] # Fires automatically when your script finishes 'gh release create'
+    types: [published] # Fires when releases is created
 
 jobs:
-  deploy:
+  deploy-to-production:
     runs-on: ubuntu-latest
+    environment: production  # Triggers the Manual Approval rule
     permissions:
-      id-token: write # CRITICAL: Allows GitHub to ask NuGet for a dynamic security token
+      id-token: write
       contents: read
 
     steps:
       - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v6
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
 
-      # Download the .nupkg file that your PowerShell script attached to the release
       - name: Fetch NuGet Asset from Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release download ${{ github.event.release.tag_name }} --pattern "*.nupkg" --dir ./packages --repo ${{ github.repository }}
 
-      # Exchange your GitHub identity token for a temporary NuGet Sandbox API Key
-      - name: NuGet login (OIDC → temp API key)
+      - name: NuGet Production Login
         uses: NuGet/login@v1
-        id: login_sandbox
+        id: login_production
         with:
-          # Put your exact NuGet.org username/profile name here (NOT your email)
-          user: CodersRealm 
-          # Points the login step to the testing sandbox environment
-          nuget-server-url: https://nugettest.org
-          token-service-url: https://www.nugettest.org/api/v2/token
-          audience: https://www.nugettest.org
+          user: CodersRealm
+          nuget-server-url: https://nuget.org
 
-      # Push the binary directly to the target environment using the temporary key
-      - name: Push to NuGet Sandbox
+      - name: Push to NuGet Production
         run: |
-          dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://api.nugettest.org/v3/index.json
+          dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_production.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+
+
+
+
+          # name: publish-to-nuget
+# on:
+#   release:
+#     types: [published] # Fires automatically when your script finishes 'gh release create'
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       id-token: write # CRITICAL: Allows GitHub to ask NuGet for a dynamic security token
+#       contents: read
+
+#     steps:
+#       - name: Setup .NET SDK
+#         uses: actions/setup-dotnet@v4
+#         with:
+#           dotnet-version: '10.0.x'
+
+#       # Download the .nupkg file that your PowerShell script attached to the release
+#       - name: Fetch NuGet Asset from Release
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           gh release download ${{ github.event.release.tag_name }} --pattern "*.nupkg" --dir ./packages --repo ${{ github.repository }}
+
+#       # Exchange your GitHub identity token for a temporary NuGet Sandbox API Key
+#       - name: NuGet login (OIDC → temp API key)
+#         uses: NuGet/login@v1
+#         id: login_sandbox
+#         with:
+#           # Put your exact NuGet.org username/profile name here (NOT your email)
+#           user: CodersRealm 
+#           # Points the login step to the testing sandbox environment
+#           nuget-server-url: https://int.nugettest.org
+#           token-service-url: https://int.nugettest.org/api/v2/token
+#           audience: https://int.nugettest.org
+
+#       # Push the binary directly to the target environment using the temporary key
+#       - name: Push to NuGet Sandbox
+#         run: |
+#           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+
 
 
 # name: publish-to-nuget
@@ -73,7 +113,7 @@ jobs:
 #           user: CodersRealm
 #           #nuget-server-url: https://nugettest.org
 #           nuget-url: https://nugettest.org 
-#
+
 #       - name: Push to NuGet Sandbox
 #         run: |
 #           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_sandbox.outputs.NUGET_API_KEY }} --source https://api.nugettest.org/v3/index.json
@@ -109,3 +149,4 @@ jobs:
 #       - name: Push to NuGet Production
 #         run: |
 #           dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login_production.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+
