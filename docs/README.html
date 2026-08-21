@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#128640; DocFX Documentation Deployment Script | CodersRealm Docs </title>
+      <title>DocFX documentation deployment | CodersRealm Docs </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#128640; DocFX Documentation Deployment Script | CodersRealm Docs ">
+      <meta name="title" content="DocFX documentation deployment | CodersRealm Docs ">
     
     
       <link rel="shortcut icon" href="favicon.ico">
@@ -60,62 +60,71 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="-docfx-documentation-deployment-script">🚀 DocFX Documentation Deployment Script</h1>
+<h1 id="docfx-documentation-deployment">DocFX documentation deployment</h1>
 
-<p>This repository contains a PowerShell automation script designed to compile your C# source code XML comments into static HTML documentation using <strong>DocFX</strong>, and seamlessly deploy those assets to a completely separate GitHub documentation repository.</p>
-<p>By using a cross-repository layout and an <strong>orphan branch</strong>, your source history remains perfectly clean while your website stays completely isolated.</p>
-<hr>
-<h2 id="-architecture--how-it-works">🛠️ Architecture &amp; How It Works</h2>
-<ol>
-<li><strong>Clean Slate:</strong> The script empties the target documentation repository using a custom function (<code>Clear-VisibleFolderContents</code>) that protects hidden files like your <code>.git</code> history.</li>
-<li><strong>Safe Branch Swapping:</strong> It switches the target repository to the <code>gh-pages</code> branch.</li>
-<li><strong>Compilation:</strong> It triggers <code>docfx metadata</code> and <code>docfx build</code> from your project folder, rendering the website directly into the <code>/docs</code> folder of your target repository.</li>
-<li><strong>Force Deployment:</strong> It stages, commits, and <strong>force-pushes</strong> (<code>git push -f</code>) the fresh HTML files directly to GitHub.</li>
-<li><strong>Reset:</strong> It cleans the folder one more time and returns the target repository safely back to the <code>main</code> branch so your workspace stays pristine.</li>
-</ol>
-<hr>
-<h2 id="-prerequisites">📋 Prerequisites</h2>
-<p>Before running the script, ensure you have the following installed on your machine:</p>
+<p>This folder contains documentation guidance and the helper scripts used to build and publish the project's DocFX-generated documentation.</p>
+<p>Summary of the current workflow (updated): the documentation deployment is triggered as part of the project's Pack step. When you run the Pack command for the CodersRealm.NmsAmqpClient project (for example via <code>dotnet pack</code> or the Visual Studio Pack action), the repository's packaging targets will invoke script-main-runner.ps1 which in turn invokes the DocFX deployment flow. A separate convenience script (deploy-docs.ps1) is also included for manual runs.</p>
+<p>What changed from earlier versions:</p>
 <ul>
-<li><strong>PowerShell 7+</strong> (Recommended) or Windows PowerShell</li>
-<li><strong>Git</strong> (Configured with access to your GitHub account)</li>
-<li><strong>DocFX CLI</strong> (Added to your system's Environment Variables <code>PATH</code>)</li>
+<li>The Pack step now runs the primary automation (script-main-runner.ps1). You no longer need to run deploy steps only from the top-level repo by default.</li>
+<li>The scripts still publish into a separate documentation repository (a sibling repo with the gh-pages branch), but invocation and some layout assumptions were simplified.</li>
 </ul>
 <hr>
-<h2 id="-repository-setup">⚙️ Repository Setup</h2>
-<p>To ensure the script runs flawlessly, your local folders <strong>must</strong> be organized exactly like this on your hard drive:</p>
-<pre><code class="lang-text">📁 Your-Development-Directory/
-├── 📁 NmsAmqpClient/           &lt;-- This repository (Contains the source code and script)
-│   ├── docfx.json
-│   └── deploy-docs.ps1
-└── 📁 NmsAmqpClient-Docs/      &lt;-- The dedicated documentation repository
+<h2 id="architecture--behavior">Architecture &amp; behavior</h2>
+<ul>
+<li>The pack-time runner (script-main-runner.ps1) collects XML documentation from the build output, runs DocFX to generate the static site, and places the generated site into the <code>docs</code> folder of the configured documentation repository.</li>
+<li>The deployment script clears visible contents in the target <code>docs</code> folder while preserving the target repo's <code>.git</code> folder so history and branch metadata remain intact.</li>
+<li>The target repository is switched to the <code>gh-pages</code> branch for publishing. The freshly generated files are committed and pushed to the remote <code>gh-pages</code> branch. The publish uses a force push to ensure the published site matches the generated output exactly.</li>
+<li>After publishing, the script leaves the documentation repository in a clean state (switching back to the default branch) so your workspace remains usable.</li>
+</ul>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>PowerShell 7+ (recommended) otherwise you have to modify scripts to work with Windows Powershell</li>
+<li>Git (configured with credentials to push to the documentation repository)</li>
+<li>GitHub CLI (to install: winget install GitHub.cli)</li>
+<li>DocFX CLI available on PATH</li>
+<li>dotnet SDK (the same SDK you use to build/pack the CodersRealm.NmsAmqpClient project)</li>
+</ul>
+<p>Note: Your development machine must be able to run <code>dotnet pack</code> for the CodersRealm.NmsAmqpClient project. The pack process is what triggers the automatic script-main-runner.ps1 invocation.</p>
+<hr>
+<h2 id="local-repository-layout">Local repository layout</h2>
+<p>The scripts assume a sibling repository layout where the documentation repository is next to the code repository. Example:</p>
+<pre><code>&lt;development-root&gt;/
+├── NmsAmqpClient/                         &lt;-- this repository (source + packaging targets)
+│   ├── src/                               &lt;-- project source tree
+│   └── docfx/                             &lt;-- the folder with scripts and docfx.json
+└── NmsAmqpClient-Docs/                    &lt;-- documentation repository (target for published docs)
     ├── .git/
-    └── docs/                   &lt;-- GitHub Pages reads from this folder
+    └── Docs/                              &lt;-- GitHub Pages reads from this folder (gh-pages branch)
 </code></pre>
-<h3 id="github-pages-configuration">GitHub Pages Configuration</h3>
+<hr>
+<h2 id="how-to-publish">How to publish</h2>
+<p>Preferred (automated):</p>
 <ol>
-<li>Go to your <strong>NmsAmqpClient-Docs</strong> repository on GitHub.</li>
-<li>Navigate to <strong>Settings</strong> &gt; <strong>Pages</strong>.</li>
-<li>Under <em>Build and deployment</em>, set the Source to <strong>Deploy from a branch</strong>.</li>
-<li>Set the Branch to <strong><code>gh-pages</code></strong> and the folder to <strong><code>/docs</code></strong>.</li>
+<li><p>Within Visual Studio, with the solution opened, on the CodersRealm.NmsAmqpClient project right click and select the the Pack command.</p>
+<p>Or via command line (from the solution folder): dotnet pack ./src/CodersRealm.NmsAmqpClient.csproj -c Release</p>
+<p>The project's pack targets will invoke script-main-runner.ps1 which performs the DocFX generation and deployment.</p>
+</li>
+</ol>
+<p>Manual (developer debugging or one-off):</p>
+<ol>
+<li><p>Build the project and ensure XML documentation files are produced.</p>
+</li>
+<li><p>From the docfx folder run the convenience script (if present):</p>
+<p>pwsh ./docfx/deploy-docs.ps1</p>
+<p>Note: the manual script may accept parameters (target repo path, branch, etc.). Inspect the script header for supported switches before running.</p>
+</li>
 </ol>
 <hr>
-<h2 id="-how-to-run-the-script">🚀 How to Run the Script</h2>
-<p>Open a PowerShell terminal, navigate to your project directory, and execute the script:</p>
-<pre><code class="lang-powershell">./deploy-docs.ps1
-</code></pre>
-<h3 id="-note-on-line-ending-warnings">🤫 Note on Line Ending Warnings</h3>
-<p>The script automatically configures your local Git environment using these flags:</p>
-<pre><code class="lang-powershell">git config core.safecrlf false
-git config core.autocrlf false
-</code></pre>
-<p>This guarantees that DocFX's native <strong>LF</strong> web assets are accepted by Git silently, completely preventing terminal flooding and keeping your build logs clean.</p>
-<hr>
-<h2 id="-important-considerations">⚠️ Important Considerations</h2>
+<h2 id="safety-and-important-notes">Safety and important notes</h2>
 <ul>
-<li><strong>Overwriting Remote History:</strong> The script uses a <strong>force-push</strong> (<code>git push -f</code>). It will completely overwrite whatever is currently on the GitHub <code>gh-pages</code> branch with your latest local build.</li>
-<li><strong>Zero Commit Protection:</strong> The script includes a safety check that scans for code changes. If you run the script and your source code hasn't changed, it will cleanly skip the Git commit and push phases to prevent script crashes.</li>
+<li>The publish operation performs a force push (git push -f) to the gh-pages branch on the documentation repository. This will replace the remote content on that branch. Make sure you have backups or that this is the intended behavior.</li>
+<li>The scripts configure Git local settings to avoid CRLF/LF conversion issues (they set core.autocrlf and core.safecrlf locally). This prevents DocFX's LF assets from being altered by Git.</li>
+<li>The scripts include checks to avoid committing when nothing changed.</li>
 </ul>
+<hr>
+<p>If you need the documentation published from a CI pipeline instead of locally, call <code>dotnet pack</code> (or the equivalent MSBuild Pack target) inside the CI agent and ensure the CI runner has permissions to push to the documentation repository.</p>
 
 </article>
           </div>

@@ -1581,32 +1581,6 @@ references:
   isSpec: "True"
   fullName: CodersRealm.NmsAmqpClient.RedeliveryPolicy.MaximumRedeliveries
   nameWithType: RedeliveryPolicy.MaximumRedeliveries
-- uid: CodersRealm.NmsAmqpClient.RedeliveryPolicy.NextBool
-  name: NextBool
-  href: api/CodersRealm.NmsAmqpClient.RedeliveryPolicy.html#CodersRealm_NmsAmqpClient_RedeliveryPolicy_NextBool
-  commentId: P:CodersRealm.NmsAmqpClient.RedeliveryPolicy.NextBool
-  fullName: CodersRealm.NmsAmqpClient.RedeliveryPolicy.NextBool
-  nameWithType: RedeliveryPolicy.NextBool
-- uid: CodersRealm.NmsAmqpClient.RedeliveryPolicy.NextBool*
-  name: NextBool
-  href: api/CodersRealm.NmsAmqpClient.RedeliveryPolicy.html#CodersRealm_NmsAmqpClient_RedeliveryPolicy_NextBool_
-  commentId: Overload:CodersRealm.NmsAmqpClient.RedeliveryPolicy.NextBool
-  isSpec: "True"
-  fullName: CodersRealm.NmsAmqpClient.RedeliveryPolicy.NextBool
-  nameWithType: RedeliveryPolicy.NextBool
-- uid: CodersRealm.NmsAmqpClient.RedeliveryPolicy.RandomNumberGenerator
-  name: RandomNumberGenerator
-  href: api/CodersRealm.NmsAmqpClient.RedeliveryPolicy.html#CodersRealm_NmsAmqpClient_RedeliveryPolicy_RandomNumberGenerator
-  commentId: P:CodersRealm.NmsAmqpClient.RedeliveryPolicy.RandomNumberGenerator
-  fullName: CodersRealm.NmsAmqpClient.RedeliveryPolicy.RandomNumberGenerator
-  nameWithType: RedeliveryPolicy.RandomNumberGenerator
-- uid: CodersRealm.NmsAmqpClient.RedeliveryPolicy.RandomNumberGenerator*
-  name: RandomNumberGenerator
-  href: api/CodersRealm.NmsAmqpClient.RedeliveryPolicy.html#CodersRealm_NmsAmqpClient_RedeliveryPolicy_RandomNumberGenerator_
-  commentId: Overload:CodersRealm.NmsAmqpClient.RedeliveryPolicy.RandomNumberGenerator
-  isSpec: "True"
-  fullName: CodersRealm.NmsAmqpClient.RedeliveryPolicy.RandomNumberGenerator
-  nameWithType: RedeliveryPolicy.RandomNumberGenerator
 - uid: CodersRealm.NmsAmqpClient.RedeliveryPolicy.RedeliveryDelay(System.Int32)
   name: RedeliveryDelay(int)
   href: api/CodersRealm.NmsAmqpClient.RedeliveryPolicy.html#CodersRealm_NmsAmqpClient_RedeliveryPolicy_RedeliveryDelay_System_Int32_
