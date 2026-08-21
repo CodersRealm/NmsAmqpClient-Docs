@@ -102,8 +102,8 @@
 <h2 id="how-to-publish">How to publish</h2>
 <p>Preferred (automated):</p>
 <ol>
-<li><p>Within Visual Studio, with the solution opened, on the CodersRealm.NmsAmqpClient project right click and select the the Pack command.</p>
-<p>Or via command line (from the solution folder): dotnet pack ./src/CodersRealm.NmsAmqpClient.csproj -c Release</p>
+<li><p>From the CodersRealm.NmsAmqpClient project run the Pack command. Example from the repository root:</p>
+<p>dotnet pack ./src/CodersRealm.NmsAmqpClient/CodersRealm.NmsAmqpClient.csproj -c Release</p>
 <p>The project's pack targets will invoke script-main-runner.ps1 which performs the DocFX generation and deployment.</p>
 </li>
 </ol>
